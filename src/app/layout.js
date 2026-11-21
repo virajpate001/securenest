@@ -27,13 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${dmSans.variable} ${manrope.variable}`}>
-       <body>
-        <Topbar />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <FloatingContact />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
