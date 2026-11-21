@@ -61,7 +61,7 @@ export default function HomePage() {
             ))}
           </RevealStagger>
         </Container>
-      </section>
+      </section> 
 
       {/* Scroll spacer */}
       <div className="h-screen bg-cream" />
