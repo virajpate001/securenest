@@ -13,7 +13,7 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-navy-deep via-navy to-navy-soft py-24 text-white">
         <Container>
           <Reveal>
-            <Eyebrow>Private &amp; Commercial Vehicles</Eyebrow>
+            {/* <Eyebrow>Private &amp; Commercial Vehicles</Eyebrow> */}
           </Reveal>
           <Reveal delay={0.1}>
             <h1 className="mt-4 max-w-3xl font-display text-4xl font-extrabold tracking-tight md:text-6xl">
@@ -41,7 +41,7 @@ export default function HomePage() {
       <section id="demo" className="py-24">
         <Container>
           <Reveal>
-            <Eyebrow dark>Day 1 — Animation Test</Eyebrow>
+            {/* <Eyebrow dark>Day 1 — Animation Test</Eyebrow> */}
             <h2 className="mt-3 font-display text-3xl font-extrabold text-ink md:text-4xl">
               Scroll down to see staggered reveals →
             </h2>
