@@ -1,6 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #14213d;
+  --color-navy-deep: #0c1830;
+  --color-navy-soft: #263d60;
+  --color-gold: #e5b85c;
+  --color-gold-light: #f4cc79;
+  --color-gold-dark: #c78e24;
+  --color-ink: #17243c;
+  --color-muted: #647084;
+  --color-line: #e7eaf0;
+  --color-cream: #fbf8f1;
+
+  --font-sans: var(--font-dm-sans), sans-serif;
+  --font-display: var(--font-manrope), sans-serif;
+
+  --radius-card: 17px;
+  --radius-pill: 40px;
+
+  --shadow-brand: 0 18px 45px rgba(17, 32, 57, 0.10);
+}
 
 html {
   scroll-behavior: smooth;
@@ -11,13 +30,6 @@ body {
   @apply bg-white text-ink font-sans antialiased;
 }
 
-/* Focus-visible ring for keyboard navigation */
-:focus-visible {
-  outline: 2px solid #e5b85c;
-  outline-offset: 2px;
-}
-
-/* Respect reduced-motion globally */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
