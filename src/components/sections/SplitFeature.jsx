@@ -10,12 +10,13 @@ export default function SplitFeature() {
     <section className="py-20 md:py-28">
       <Container className="grid items-center gap-12 md:grid-cols-2 lg:gap-20">
         <Reveal className="relative h-[300px] overflow-hidden rounded-[2rem] md:h-[400px]">
-          <Image
-            src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800"
-            alt="New vehicle purchase"
-            fill
-            className="object-cover"
-          />
+         <Image
+  src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800"
+  alt="New vehicle purchase"
+  fill
+  sizes="(max-width: 768px) 100vw, 50vw"
+  className="object-cover"
+/>
           <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
           <div className="absolute bottom-6 left-6 text-white">
             <div className="text-xs font-bold tracking-widest text-gold">NEW VEHICLE</div>

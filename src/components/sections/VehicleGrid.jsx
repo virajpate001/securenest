@@ -35,7 +35,13 @@ export default function VehicleGrid() {
             <RevealItem key={v.slug}>
               <Link href={`/${v.slug}`} className="group block overflow-hidden rounded-card border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-brand">
                 <div className="relative h-40 overflow-hidden">
-                  <Image src={v.img} alt={v.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <Image
+                    src={v.img}
+                    alt={v.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-navy/20" />
                   <span className="absolute right-3 top-3 font-display text-sm font-bold text-white/50">0{i + 1}</span>
                 </div>

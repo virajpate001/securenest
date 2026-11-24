@@ -2,6 +2,7 @@ import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Reveal from "@/components/ui/Reveal";
 import { Plus, Minus } from "lucide-react";
+import JsonLd from "@/components/shared/JsonLd";
 
 const faqs = [
   { q: "What is the difference between third-party and comprehensive insurance?", a: "Third-party insurance covers specified legal liabilities to third parties. Comprehensive policies generally include third-party liability and own-damage cover, subject to policy terms, exclusions and add-ons." },
@@ -10,8 +11,27 @@ const faqs = [
   { q: "What do LPV, LMV, LGV and HGV mean?", a: "They refer to Light Passenger Vehicle, Light Motor Vehicle, Light Goods Vehicle and Heavy Goods Vehicle. Confirm the exact class using the vehicle's RC and applicable rules." },
 ];
 
+
+
 export default function FAQSection() {
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
+
   return (
+    <>
+     <JsonLd data={faqSchema} />
     <section className="py-20 md:py-28">
       <Container className="grid gap-12 md:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <Reveal>
@@ -40,5 +60,6 @@ export default function FAQSection() {
         </Reveal>
       </Container>
     </section>
+    </>
   );
 }

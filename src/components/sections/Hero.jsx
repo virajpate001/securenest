@@ -53,13 +53,14 @@ export default function Hero() {
                 src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=800"
                 alt="Luxury car driving on road"
                 fill
-                className="object-cover"
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
               />
               {/* Dark gradient overlay for better text readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent" />
             </div>
-            
+
             {/* Floating Shield Badge */}
             <div className="absolute -right-4 top-8 flex animate-float items-center gap-2 rounded-pill border border-gold/30 bg-white/10 px-4 py-2 backdrop-blur-md">
               <ShieldCheck className="h-6 w-6 text-gold" />
@@ -68,7 +69,7 @@ export default function Hero() {
           </Reveal>
         </div>
       </Container>
-      
+
       {/* Bottom Angled Shape */}
       <div className="absolute bottom-0 left-0 h-4 w-full bg-white [clip-path:polygon(0_100%,0_0,35%_100%,65%_100%,100%_0,100%_100%)]" />
     </section>
