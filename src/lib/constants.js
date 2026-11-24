@@ -11,12 +11,12 @@ export const SITE_URL =
 export const WHATSAPP_NUMBER = "919209543850";
 
 export const NAV_LINKS = [
-  { href: "/",                    label: "Home" },
+  { href: "/", label: "Home" },
   { href: "/two-wheeler-insurance", label: "Two Wheeler" },
   { href: "/four-wheeler-insurance", label: "Four Wheeler" },
   { href: "/commercial-vehicle-insurance", label: "Commercial" },
-  { href: "/new-vehicle-insurance", label: "New Vehicle" },
   { href: "/vehicle-insurance-renewal", label: "Renewal" },
+  { href: "/blog", label: "Guides" }, // Added Blog here
 ];
 
 export const FOOTER_COLUMNS = [
