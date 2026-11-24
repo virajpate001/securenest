@@ -80,10 +80,12 @@ export default async function BlogPostPage({ params }) {
           />
         </Reveal>
 
-        <Reveal delay={0.2} className="mt-10">
-          {/* Render the HTML string inside our Prose component */}
-          <Prose dangerouslySetInnerHTML={{ __html: post.content }} />
-        </Reveal>
+      <Reveal delay={0.2} className="mt-10">
+  <div 
+    className="prose prose-sm md:prose-base prose-slate max-w-none prose-headings:font-display prose-headings:font-extrabold prose-headings:text-ink prose-a:text-gold-dark hover:prose-a:text-gold prose-li:marker:text-gold"
+    dangerouslySetInnerHTML={{ __html: post.content }} 
+  />
+</Reveal>
 
         <Reveal delay={0.3} className="mt-16 rounded-2xl bg-[#f5f6f8] p-8 text-center md:p-12">
           <h3 className="font-display text-2xl font-extrabold text-ink">
