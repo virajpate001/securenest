@@ -1,15 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
+  /* config options here */
+  cacheComponents: true,
+  partialPrefetching: true,
+  turbopack: {
+    rules: {
+      "*.css": {
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
+  },
+   images: {
     remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
     // Cache images for 60 days (in seconds)
-    minimumCacheTTL: 60 * 60 * 24 * 60,
-  },
-  async redirects() {
-    return [
-      { source: "/index.html", destination: "/", permanent: true },
-      { source: "/:slug.html", destination: "/:slug", permanent: true },
-    ];
+    minimumCacheTTL: 60 * 60 * 24 * 60, 
   },
   async headers() {
     return [
