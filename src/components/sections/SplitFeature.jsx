@@ -38,9 +38,9 @@ export default function SplitFeature() {
               </li>
             ))}
           </ul>
-          <Button as="a" href="/get-a-quote" variant="navy" size="lg" className="mt-8">
-            Enquire about a new vehicle →
-          </Button>
+          <Button as="a" href="/get-a-quote?requirement=Brand+New+Vehicle" variant="navy" size="lg" className="mt-8">
+  Enquire about a new vehicle →
+</Button>
         </Reveal>
       </Container>
     </section>
