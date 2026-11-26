@@ -26,11 +26,11 @@ export default function ContactPage() {
               Replace these placeholders with the agent's verified business contact information before publishing.
             </p>
             <div className="mt-6 space-y-4 text-sm">
-  <p><strong>WhatsApp:</strong> +91 98765 43210</p>
-  <p><strong>Email:</strong> support@securenest.in</p>
-  <p><strong>Service area:</strong> All India</p>
-  <p><strong>Business hours:</strong> Mon-Sat, 9:00 AM - 6:00 PM</p>
-</div>
+              <p><strong>WhatsApp:</strong> +91 98765 43210</p>
+              <p><strong>Email:</strong> support@securenest.in</p>
+              <p><strong>Service area:</strong> All India</p>
+              <p><strong>Business hours:</strong> Mon-Sat, 9:00 AM - 6:00 PM</p>
+            </div>
           </Reveal>
 
           <Reveal delay={0.1} className="rounded-card border border-line bg-white p-8 shadow-sm">

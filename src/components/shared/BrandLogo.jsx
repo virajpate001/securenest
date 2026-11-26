@@ -26,7 +26,7 @@ export default function BrandLogo({ light = false, className }) {
             light ? "text-white/70" : "text-ink",
           )}
         >
-          VEHICLE INSURANCE
+         Secure Your Tomorrow.
         </small>
       </span>
     </Link>

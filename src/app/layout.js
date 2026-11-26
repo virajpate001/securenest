@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
             },
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+91-9209543850", // Replace with your number
+              telephone: "+91-8767144467", // Replace with your number
               contactType: "customer service",
             },
           }}

@@ -14,6 +14,16 @@ export default function Footer() {
               Secure your tomorrow. Explore private and commercial vehicle
               insurance options with guided assistance.
             </p>
+
+            <Reveal className="rounded-card bg-[#f5f6f8] p-8">
+                      
+                       <div className="mt-6 space-y-4 text-sm">
+                         <p><strong>WhatsApp:</strong> +91 98765 43210</p>
+                         <p><strong>Email:</strong> support@securenest.in</p>
+                         <p><strong>Service area:</strong> All India</p>
+                         <p><strong>Business hours:</strong> Mon-Sat, 9:00 AM - 6:00 PM</p>
+                       </div>
+                     </Reveal>
           </div>
           
           {FOOTER_COLUMNS.map((col) => (

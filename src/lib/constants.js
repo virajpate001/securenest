@@ -8,7 +8,7 @@ export const SITE_URL =
 // Format: country code + number, digits only, NO +, NO spaces.
 // India example: 919876543210
 // ─────────────────────────────────────────────────────────────
-export const WHATSAPP_NUMBER = "919209543850";
+export const WHATSAPP_NUMBER = "918767144467"; 
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
