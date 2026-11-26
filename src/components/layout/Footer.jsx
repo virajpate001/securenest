@@ -16,7 +16,7 @@ export default function Footer() {
               insurance options with guided assistance.
             </p>
 
-            <Reveal className="rounded-card bg-[#f5f6f8] p-8">
+            <Reveal className="rounded-card bg-white p-4 mt-4" >
                       
                        <div className="mt-6 space-y-4 text-sm">
                          <p><strong>WhatsApp:</strong> +91 98765 43210</p>
