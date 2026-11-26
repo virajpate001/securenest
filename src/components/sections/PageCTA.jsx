@@ -8,8 +8,8 @@ export default function PageCTA() {
       <Container>
         <Reveal className="flex flex-col items-start justify-between gap-6 rounded-[1.5rem] bg-navy p-8 md:flex-row md:items-center md:p-12 bg-primary">
           <div>
-            <h2 className="font-display text-2xl font-extrabold text-white md:text-3xl text-brand-yellow">
-              Need help exploring your options?
+            <h2 className="font-display text-2xl font-extrabold md:text-3xl tw">
+              Need help exploring your options? 
             </h2>
             <p className="mt-2 text-sm text-[#cbd4e2]">
               Share your vehicle details and the SecureNest team can respond to your enquiry.
