@@ -2,6 +2,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import BrandLogo from "@/components/shared/BrandLogo";
 import { FOOTER_COLUMNS } from "@/lib/constants";
+import Reveal from "@/components/ui/Reveal";
 
 export default function Footer() {
   return (
