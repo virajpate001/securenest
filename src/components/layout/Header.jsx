@@ -21,19 +21,25 @@ export default function Header() {
 
   // Prevent background scroll when mobile menu is open
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = "unset";
     };
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-navy/10 bg-white/95 backdrop-blur-md">
-      <Container className="flex h-[70px] items-center justify-between gap-6 md:h-[82px]">
+    <header className="sticky top-0 z-50 border-b border-border-soft bg-white/90 backdrop-blur-md">
+      <Container className="flex h-[80px] items-center justify-between gap-6">
+        
+        {/* Logo */}
         <BrandLogo />
 
-        {/* Desktop nav */}
-        <nav className={cn("transition-colors font-manrope font-semibold hover:text-primary", active ? "text-primary" : "text-text-sec")}>
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-8 lg:flex">
           {NAV_LINKS.map(({ href, label }) => {
             const active = pathname === href;
             return (
@@ -41,50 +47,69 @@ export default function Header() {
                 key={href}
                 href={href}
                 className={cn(
-                  "transition-colors hover:text-gold-dark",
-                  active && "text-gold-dark",
+                  "font-manrope text-sm font-semibold transition-colors duration-200",
+                  active 
+                    ? "text-primary" 
+                    : "text-text-sec hover:text-primary"
                 )}
               >
                 {label}
               </Link>
             );
           })}
-         <Link href="/get-a-quote" className="inline-flex items-center gap-2 rounded-btn bg-brand-yellow px-5 py-2.5 font-manrope font-bold text-primary transition hover:bg-brand-yellow-hover">
-  Get a Quote <span>↗</span>
-</Link>
+          
+          <Link
+            href="/get-a-quote"
+            className="ml-4 inline-flex items-center gap-2 rounded-btn bg-brand-yellow px-6 py-3 font-manrope text-sm font-bold text-primary shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-yellow-hover hover:shadow-md"
+          >
+            Get a Quote <span className="text-lg leading-none">↗</span>
+          </Link>
         </nav>
 
-        {/* Mobile toggle */}
+        {/* Mobile Menu Toggle */}
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="md:hidden"
+          className="grid h-10 w-10 place-items-center rounded-xl bg-bg-soft text-primary transition-colors hover:bg-border-soft lg:hidden"
         >
-          {open ? <X className="h-7 w-7 text-navy" /> : <Menu className="h-7 w-7 text-navy" />}
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </Container>
 
-      {/* Mobile nav */}
-      {open && (
-        <div className="absolute inset-x-0 top-full z-40 bg-white shadow-lg md:hidden">
-          <nav className="flex flex-col px-6 py-4">
-            {NAV_LINKS.map(({ href, label }) => (
+      {/* Mobile Navigation Drawer */}
+      <div
+        className={cn(
+          "absolute inset-x-0 top-full z-40 h-[calc(100vh-80px)] overflow-y-auto bg-white transition-all duration-300 ease-in-out lg:hidden",
+          open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0 pointer-events-none"
+        )}
+      >
+        <nav className="flex flex-col px-6 py-6 pb-24">
+          {NAV_LINKS.map(({ href, label }) => {
+            const active = pathname === href;
+            return (
               <Link
                 key={href}
                 href={href}
-                className="border-b border-line py-3 text-sm font-bold text-ink"
+                className={cn(
+                  "border-b border-border-soft py-4 font-manrope text-base font-semibold transition-colors",
+                  active ? "text-brand-yellow" : "text-primary"
+                )}
               >
                 {label}
               </Link>
-            ))}
-           <Link href="/get-a-quote" className="inline-flex items-center gap-2 rounded-btn bg-brand-yellow px-5 py-2.5 font-manrope font-bold text-primary transition hover:bg-brand-yellow-hover">
-  Get a Quote <span>↗</span>
-</Link>
-          </nav>
-        </div>
-      )}
+            );
+          })}
+          
+          <Link
+            href="/get-a-quote"
+            className="mt-8 flex w-full items-center justify-center gap-2 rounded-btn bg-brand-yellow px-6 py-4 font-manrope text-base font-bold text-primary shadow-sm transition-colors hover:bg-brand-yellow-hover"
+          >
+            Get a Quote <span className="text-xl leading-none">↗</span>
+          </Link>
+        </nav>
+      </div>
     </header>
   );
 }
