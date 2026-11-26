@@ -28,7 +28,7 @@ export default function ImageReveal({
   return (
     <motion.div
       className={className}
-      initial={{ clipPath: "inset(0 0 100% 0)" }}
+      initial={{ clipPath: "inset(0 0 0% 0)" }}
       whileInView={{ clipPath: "inset(0 0 0% 0)" }}
       viewport={{ once, amount: 0.2 }}
       transition={{ 

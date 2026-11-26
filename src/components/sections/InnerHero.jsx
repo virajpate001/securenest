@@ -26,7 +26,7 @@ export default function InnerHero({
         
         <Reveal delay={0.1}>
           <Eyebrow className="bg-white/10 text-brand-yellow">{eyebrow}</Eyebrow>
-          <h1 className="mt-6 max-w-4xl font-display text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
+          <h1 className="mt-6 max-w-4xl font-display text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl text-white">
             {title}
           </h1>
         </Reveal>

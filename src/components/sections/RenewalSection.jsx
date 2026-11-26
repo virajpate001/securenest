@@ -12,7 +12,7 @@ export default function RenewalSection() {
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-yellow">
             Policy Renewal
           </div>
-          <h2 className="mt-6 max-w-lg font-display text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
+          <h2 className="mt-6 max-w-lg font-display text-3xl font-bold leading-tight  md:text-4xl lg:text-5xl text-white">
             Is your vehicle policy <span className="text-brand-yellow">due for renewal?</span>
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-white/70">
