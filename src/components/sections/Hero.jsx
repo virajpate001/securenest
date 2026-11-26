@@ -3,75 +3,73 @@ import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, CheckCircle2 } from "lucide-react";
+import ImageReveal from "@/components/ui/ImageReveal";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_76%_44%,#263d60_0,#172b4b_27%,#101e37_58%,#0b172d_100%)] text-white">
-      {/* Decorative Orbits */}
-      <div className="pointer-events-none absolute right-[-130px] top-[-160px] h-[600px] w-[600px] rounded-full border border-gold/20" />
-      <div className="pointer-events-none absolute right-[-55px] top-[-85px] h-[450px] w-[450px] rounded-full border border-gold/10" />
-
-      <Container className="relative z-10 grid items-center gap-10 pb-20 pt-16 md:grid-cols-2 md:pb-24 md:pt-20">
+    <section className="relative overflow-hidden bg-bg-sec pb-20 pt-16 md:pb-28 md:pt-24">
+      <Container className="relative z-10 grid items-center gap-12 md:grid-cols-2 lg:gap-20">
+        
         {/* Left Copy */}
         <div>
           <Reveal>
             <Eyebrow>Private &amp; Commercial Vehicles</Eyebrow>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] tracking-tight md:text-5xl lg:text-6xl">
-              Insurance assistance for <br className="hidden md:block" />
-              <span className="text-gold">every journey.</span>
+            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-primary md:text-5xl lg:text-[64px]">
+              Insurance assistance for <br className="hidden lg:block" />
+              <span className="relative inline-block">
+                <span className="absolute bottom-2 left-0 -z-10 h-4 w-full bg-brand-yellow/40"></span>
+                every journey.
+              </span>
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-[#cbd4e2] md:text-lg">
+            <p className="mt-6 max-w-lg text-base leading-relaxed text-text-sec md:text-lg">
               Explore vehicle insurance options with clear guidance for your car, bike, passenger vehicle or goods carrier.
             </p>
           </Reveal>
-          <Reveal delay={0.3} className="mt-8 flex flex-wrap gap-3">
-            <Button as="a" href="/get-a-quote" variant="gold" size="lg">
+          <Reveal delay={0.3} className="mt-8 flex flex-wrap gap-4">
+            <Button as="a" href="/get-a-quote" variant="primary" size="lg">
               Get an Enquiry →
             </Button>
             <Button as="a" href="#vehicle-types" variant="outline" size="lg">
               Explore Vehicles
             </Button>
           </Reveal>
-          <Reveal delay={0.4} className="mt-8 flex flex-wrap gap-5 text-xs text-[#c7d0de]">
-            <span className="flex items-center gap-2"><span className="text-gold">✓</span> New policy enquiries</span>
-            <span className="flex items-center gap-2"><span className="text-gold">✓</span> Renewal assistance</span>
-            <span className="flex items-center gap-2"><span className="text-gold">✓</span> Policy guidance</span>
+          <Reveal delay={0.4} className="mt-8 flex flex-wrap gap-6 text-sm font-medium text-text-sec">
+            <span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-brand-yellow" /> New policy enquiries</span>
+            <span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-brand-yellow" /> Renewal assistance</span>
           </Reveal>
         </div>
 
         {/* Right Visual */}
-        <div className="relative h-[300px] w-full md:h-[400px]">
-          <Reveal delay={0.2} className="relative h-full w-full">
-            {/* Main Car Image */}
-            <div className="absolute inset-0 overflow-hidden rounded-[2rem] shadow-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=800"
-                alt="Luxury car driving on road"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-              {/* Dark gradient overlay for better text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent" />
-            </div>
-
+        <div className="relative h-[350px] w-full md:h-[480px]">
+          <ImageReveal className="h-full w-full rounded-[2rem] overflow-hidden shadow-2xl">
+            <Image
+              src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=1000"
+              alt="Luxury car driving on road"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Subtle gradient overlay for badge visibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent" />
+            
             {/* Floating Shield Badge */}
-            <div className="absolute -right-4 top-8 flex animate-float items-center gap-2 rounded-pill border border-gold/30 bg-white/10 px-4 py-2 backdrop-blur-md">
-              <ShieldCheck className="h-6 w-6 text-gold" />
-              <span className="text-sm font-bold text-white">SecureNest</span>
+            <div className="absolute bottom-6 left-6 flex animate-float items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-5 py-3 backdrop-blur-md">
+              <div className="grid h-10 w-10 place-items-center rounded-xl bg-brand-yellow text-primary">
+                <ShieldCheck className="h-6 w-6" />
+              </div>
+              <div>
+                <div className="font-display font-bold text-white">SecureNest</div>
+                <div className="text-xs font-medium text-white/80">100% Guided</div>
+              </div>
             </div>
-          </Reveal>
+          </ImageReveal>
         </div>
       </Container>
-
-      {/* Bottom Angled Shape */}
-      <div className="absolute bottom-0 left-0 h-4 w-full bg-white [clip-path:polygon(0_100%,0_0,35%_100%,65%_100%,100%_0,100%_100%)]" />
     </section>
   );
 }

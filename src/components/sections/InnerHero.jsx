@@ -11,34 +11,37 @@ export default function InnerHero({
   breadcrumb = "Page"
 }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-navy-deep to-navy-soft py-16 text-white md:py-24">
+    <section className="relative overflow-hidden bg-primary pb-32 pt-20 text-white md:pb-40 md:pt-28">
+      {/* Optional: Subtle grid or radial glow for premium feel */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
+      
       <Container className="relative z-10">
         <Reveal>
-          <div className="mb-4 text-xs text-[#b9c4d4]">
-            <Link href="/" className="text-gold hover:underline">Home</Link>
+          <div className="mb-6 text-sm font-medium text-white/60">
+            <Link href="/" className="text-brand-yellow transition-colors hover:text-white">Home</Link>
             <span className="mx-2">/</span>
             <span>{breadcrumb}</span>
           </div>
         </Reveal>
         
         <Reveal delay={0.1}>
-          <Eyebrow>{eyebrow}</Eyebrow>
-          <h1 className="mt-4 max-w-3xl font-display text-3xl font-extrabold tracking-tight md:text-5xl">
+          <Eyebrow className="bg-white/10 text-brand-yellow">{eyebrow}</Eyebrow>
+          <h1 className="mt-6 max-w-4xl font-display text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
             {title}
           </h1>
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[#d1d9e5] md:text-base">
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/80 md:text-lg">
             {description}
           </p>
         </Reveal>
 
-        <Reveal delay={0.3} className="mt-8 flex flex-wrap gap-3">
-          <Button as="a" href="/get-a-quote" variant="gold" size="lg">
+        <Reveal delay={0.3} className="mt-10 flex flex-wrap gap-4">
+          <Button as="a" href="/get-a-quote" variant="primary" size="lg">
             Make an enquiry →
           </Button>
-          <Button as="a" href="/contact" variant="outline" size="lg">
+          <Button as="a" href="/contact" variant="outline" size="lg" className="border-white/20 text-white hover:border-white hover:bg-white/5">
             Contact us
           </Button>
         </Reveal>

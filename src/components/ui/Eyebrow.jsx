@@ -4,12 +4,11 @@ export default function Eyebrow({ children, dark = false, className }) {
   return (
     <div
       className={cn(
-        "flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[2px]",
-        dark ? "text-gold-dark" : "text-gold",
-        className,
+        "inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider font-manrope",
+        dark ? "bg-primary/5 text-primary" : "bg-brand-yellow-soft text-primary",
+        className
       )}
     >
-      <span className={cn("inline-block h-0.5 w-6", dark ? "bg-gold-dark" : "bg-gold")} />
       {children}
     </div>
   );

@@ -13,15 +13,16 @@ import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 const inputCls =
-  "w-full rounded-lg border border-line bg-white px-3 py-2.5 text-sm " +
-  "outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20";
+  "w-full rounded-xl border border-border-soft bg-bg-main px-4 py-3 text-sm text-primary " +
+  "outline-none transition-all focus:border-brand-yellow focus:ring-4 focus:ring-brand-yellow/20 " +
+  "placeholder:text-text-muted";
 
 function Field({ label, error, children }) {
   return (
-    <label className="flex flex-col gap-1.5 text-xs font-bold text-ink">
+    <label className="flex flex-col gap-2 font-manrope text-sm font-bold text-primary">
       <span>{label}</span>
       {children}
-      {error && <span className="font-normal text-red-600">{error}</span>}
+      {error && <span className="text-xs font-medium text-red-500">{error}</span>}
     </label>
   );
 }
@@ -46,41 +47,37 @@ export default function QuoteForm({ defaultRequirement = "" }) {
 
   const onSubmit = (data) => {
     setStatus("opening");
-
     const message = formatEnquiryMessage(data);
     const url = buildWhatsAppUrl(message);
     setFallbackUrl(url);
 
-    // Give the UI a tick to render the "Opening WhatsApp…" state,
-    // then navigate.
     setTimeout(() => {
       window.location.href = url;
-      // Reset the form so a back-navigation shows a clean slate.
       reset();
       setStatus("idle");
     }, 300);
   };
 
   return (
-    <Reveal className="rounded-card bg-white p-6 shadow-brand md:p-8">
-      <div className="mb-6">
-        <strong className="block font-display text-xl text-ink">
+    <Reveal className="rounded-[1.5rem] border border-border-soft bg-white p-8 shadow-brand md:p-10">
+      <div className="mb-8">
+        <h3 className="font-display text-2xl font-bold text-primary">
           Vehicle insurance enquiry
-        </strong>
-        <small className="text-muted">
-          Your details will open in WhatsApp — just tap Send to reach our team.
-        </small>
+        </h3>
+        <p className="mt-2 text-sm text-text-sec">
+          Your details will open securely in WhatsApp — just tap Send to reach our team.
+        </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
-        {/* Honeypot — hidden from users, bots fill it, we ignore */}
+      <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
+        {/* Honeypot */}
         <input
           type="text" tabIndex={-1} autoComplete="off"
           {...register("company")}
           className="hidden" aria-hidden="true"
         />
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-5 sm:grid-cols-2">
           <Field label="Vehicle category" error={errors.vehicle?.message}>
             <select {...register("vehicle")} className={inputCls}>
               <option value="">Select vehicle</option>
@@ -119,7 +116,7 @@ export default function QuoteForm({ defaultRequirement = "" }) {
           </select>
         </Field>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-5 sm:grid-cols-2">
           <Field label="Your name" error={errors.name?.message}>
             <input {...register("name")} placeholder="Enter your name" className={inputCls} />
           </Field>
@@ -139,21 +136,22 @@ export default function QuoteForm({ defaultRequirement = "" }) {
           />
         </Field>
 
-        <label className="flex items-start gap-2 text-xs text-muted">
-          <input type="checkbox" {...register("consent")} className="mt-1" />
+        <label className="flex items-start gap-3 rounded-xl bg-bg-soft p-4 text-sm text-text-sec">
+          <input type="checkbox" {...register("consent")} className="mt-1 h-4 w-4 rounded border-border-soft text-brand-yellow focus:ring-brand-yellow" />
           <span>
             I agree to be contacted about this enquiry on WhatsApp and acknowledge the{" "}
-            <a href="/privacy-policy" className="underline hover:text-ink">privacy notice</a>.
+            <a href="/privacy-policy" className="font-medium text-primary underline hover:text-brand-yellow">privacy notice</a>.
           </span>
         </label>
         {errors.consent && (
-          <p className="text-xs text-red-600">{errors.consent.message}</p>
+          <p className="text-xs font-medium text-red-500">{errors.consent.message}</p>
         )}
 
         <Button
           type="submit"
-          variant="gold"
-          className="w-full mt-2"
+          variant="primary"
+          size="lg"
+          className="mt-2 w-full"
           disabled={status === "opening"}
         >
           <MessageCircle className="h-5 w-5" />
@@ -164,11 +162,11 @@ export default function QuoteForm({ defaultRequirement = "" }) {
           <motion.p
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center text-xs text-muted"
+            className="text-center text-sm text-text-sec"
             role="status" aria-live="polite"
           >
             If WhatsApp didn't open automatically,{" "}
-            <a href={fallbackUrl} className="font-bold underline text-gold-dark" target="_blank" rel="noopener noreferrer">
+            <a href={fallbackUrl} className="font-bold text-primary underline hover:text-brand-yellow" target="_blank" rel="noopener noreferrer">
               tap here to open the chat
             </a>
             .

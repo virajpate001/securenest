@@ -12,7 +12,7 @@ function QuotePageContent() {
   const requirement = searchParams.get("requirement") || "";
 
   return (
-    <Container className="py-16 md:py-24">
+    <Container className="relative z-10 -mt-12 pb-24">
       <div className="mx-auto max-w-2xl">
         <QuoteForm defaultRequirement={requirement} />
       </div>
@@ -30,9 +30,8 @@ export default function GetAQuotePage() {
         description="Share basic details about your vehicle and insurance requirement. This form will redirect you to WhatsApp to complete your enquiry securely."
       />
 
-      {/* Suspense is required by Next.js when using useSearchParams */}
       <Suspense fallback={
-        <Container className="py-24 text-center text-muted">
+        <Container className="py-24 text-center text-text-sec">
           Loading form...
         </Container>
       }>

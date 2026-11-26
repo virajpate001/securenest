@@ -1,5 +1,4 @@
 import Container from "@/components/ui/Container";
-import IconBox from "@/components/ui/IconBox";
 import { RevealStagger, RevealItem } from "@/components/ui/RevealStagger";
 import { Sparkles, RefreshCw, Phone, Home } from "lucide-react";
 
@@ -12,17 +11,17 @@ const items = [
 
 export default function TrustStrip() {
   return (
-    <section className="border-b border-line bg-white py-6">
+    <section className="border-b border-border-soft bg-white py-10">
       <Container>
-        <RevealStagger className="grid grid-cols-2 gap-6 md:grid-cols-4">
+        <RevealStagger className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
           {items.map((item, i) => (
-            <RevealItem key={i} className="flex items-center gap-3">
-              <IconBox className="h-12 w-12 shrink-0">
+            <RevealItem key={i} className="flex items-center gap-4">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-bg-soft text-primary">
                 <item.icon className="h-6 w-6" />
-              </IconBox>
+              </div>
               <div>
-                <strong className="block text-sm text-ink">{item.title}</strong>
-                <small className="mt-0.5 block text-[11px] text-muted">{item.desc}</small>
+                <strong className="block font-display text-sm font-bold text-primary">{item.title}</strong>
+                <small className="mt-1 block text-xs font-medium text-text-sec">{item.desc}</small>
               </div>
             </RevealItem>
           ))}

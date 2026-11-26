@@ -2,35 +2,48 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-navy: #14213d;
-  --color-navy-deep: #0c1830;
-  --color-navy-soft: #263d60;
-  --color-gold: #e5b85c;
-  --color-gold-light: #f4cc79;
-  --color-gold-dark: #c78e24;
-  --color-ink: #17243c;
-  --color-muted: #647084;
-  --color-line: #e7eaf0;
-  --color-cream: #fbf8f1;
+  /* Colors */
+  --color-primary: #011248;
+  --color-text-sec: #555B66;
+  --color-text-muted: #858B95;
+  
+  --color-brand-yellow: #ffc107;
+  --color-brand-yellow-hover: #FFD04A;
+  --color-brand-yellow-soft: #FFF8E5;
+  
+  --color-bg-main: #FFFFFF;
+  --color-bg-sec: #F7F8FA;
+  --color-bg-soft: #F1F3F6;
+  --color-border-soft: #E8EAF0;
 
-  --font-sans: var(--font-dm-sans), sans-serif;
-  --font-display: var(--font-manrope), sans-serif;
+  /* Typography */
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-sora), sans-serif;
+  --font-manrope: var(--font-manrope), sans-serif;
 
-  --radius-card: 17px;
-  --radius-pill: 40px;
+  /* Radii */
+  --radius-card: 16px;
+  --radius-btn: 12px;
 
-  --shadow-brand: 0 18px 45px rgba(17, 32, 57, 0.10);
+  /* Shadows */
+  --shadow-brand: 0 10px 30px rgba(1, 18, 72, 0.05);
 }
 
+/* Base Styles */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
 
 body {
-  @apply bg-white text-ink font-sans antialiased;
+  @apply bg-bg-main text-primary font-sans antialiased;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-bold tracking-tight text-primary;
+}
+
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {

@@ -33,7 +33,7 @@ export default function Header() {
         <BrandLogo />
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-6 text-[13px] font-bold text-[#354158] md:flex">
+        <nav className={cn("transition-colors font-manrope font-semibold hover:text-primary", active ? "text-primary" : "text-text-sec")}>
           {NAV_LINKS.map(({ href, label }) => {
             const active = pathname === href;
             return (
@@ -49,12 +49,9 @@ export default function Header() {
               </Link>
             );
           })}
-          <Link
-            href="/get-a-quote"
-            className="inline-flex items-center gap-2 rounded-[9px] bg-navy px-4 py-3 text-white transition hover:bg-navy-deep"
-          >
-            Get a Quote <span className="text-gold">↗</span>
-          </Link>
+         <Link href="/get-a-quote" className="inline-flex items-center gap-2 rounded-btn bg-brand-yellow px-5 py-2.5 font-manrope font-bold text-primary transition hover:bg-brand-yellow-hover">
+  Get a Quote <span>↗</span>
+</Link>
         </nav>
 
         {/* Mobile toggle */}
@@ -82,12 +79,9 @@ export default function Header() {
                 {label}
               </Link>
             ))}
-            <Link
-              href="/get-a-quote"
-              className="mt-4 rounded-[9px] bg-navy px-4 py-3 text-center text-sm font-bold text-white"
-            >
-              Get a Quote <span className="text-gold">↗</span>
-            </Link>
+           <Link href="/get-a-quote" className="inline-flex items-center gap-2 rounded-btn bg-brand-yellow px-5 py-2.5 font-manrope font-bold text-primary transition hover:bg-brand-yellow-hover">
+  Get a Quote <span>↗</span>
+</Link>
           </nav>
         </div>
       )}
