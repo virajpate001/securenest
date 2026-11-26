@@ -33,7 +33,7 @@ export default function BrandLogo({ light = false, className }) {
             light ? "text-white" : "text-navy",
           )}
         >
-          Secure<span className="text-gold-dark">Nest</span>
+          Secure<span className="text-brand-yellow">Nest</span>
         </strong>
         <small
           className={cn(

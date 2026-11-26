@@ -42,7 +42,7 @@ export default function AboutPage() {
           <RevealStagger className="my-12 grid gap-4 sm:grid-cols-2">
             {cards.map((c) => (
               <RevealItem key={c.title} className="rounded-card border border-line bg-white p-6">
-                <div className="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-cream text-gold-dark">
+                <div className="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-cream text-brand-yellow">
                   <c.icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-display text-base font-extrabold text-ink">{c.title}</h3>

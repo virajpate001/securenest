@@ -41,16 +41,16 @@ export default function BlogPage() {
       />
     </div>
     <div className="flex flex-1 flex-col p-6">
-      <div className="mb-2 text-[10px] font-extrabold tracking-wider text-gold-dark">
+      <div className="mb-2 text-[10px] font-extrabold tracking-wider text-brand-yellow">
         {post.category}
       </div>
-      <h3 className="font-display text-lg font-extrabold text-ink transition-colors group-hover:text-gold-dark">
+      <h3 className="font-display text-lg font-extrabold text-ink transition-colors group-hover:text-brand-yellow">
         {post.title}
       </h3>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
         {post.excerpt}
       </p>
-      <div className="mt-4 text-xs font-bold text-gold-dark">
+      <div className="mt-4 text-xs font-bold text-brand-yellow">
         Read article →
       </div>
     </div>

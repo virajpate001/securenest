@@ -32,7 +32,7 @@ export default function LGVPage() {
           <RevealStagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {cards.map((c) => (
               <RevealItem key={c.title} className="rounded-card border border-line bg-white p-6">
-                <div className="mb-4 grid h-10 w-10 place-items-center rounded-lg bg-cream text-gold-dark">
+                <div className="mb-4 grid h-10 w-10 place-items-center rounded-lg bg-cream text-brand-yellow">
                   <c.icon className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-sm font-extrabold text-ink">{c.title}</h3>

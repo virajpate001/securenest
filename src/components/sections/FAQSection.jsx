@@ -37,7 +37,7 @@ export default function FAQSection() {
         <Reveal>
           <Eyebrow dark>Have Questions?</Eyebrow>
           <h2 className="mt-4 font-display text-3xl font-extrabold text-ink md:text-4xl">
-            Frequently asked <span className="text-gold-dark">questions</span>
+            Frequently asked <span className="text-brand-yellow">questions</span>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-muted">
             Quick answers to common vehicle insurance questions.
@@ -49,8 +49,8 @@ export default function FAQSection() {
             <details key={i} className="group border-b border-line py-4">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-sm font-bold text-ink">
                 {faq.q}
-                <span className="text-gold-dark group-open:hidden"><Plus className="h-5 w-5" /></span>
-                <span className="hidden text-gold-dark group-open:block"><Minus className="h-5 w-5" /></span>
+                <span className="text-brand-yellow group-open:hidden"><Plus className="h-5 w-5" /></span>
+                <span className="hidden text-brand-yellow group-open:block"><Minus className="h-5 w-5" /></span>
               </summary>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
                 {faq.a}

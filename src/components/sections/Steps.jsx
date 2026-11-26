@@ -19,7 +19,7 @@ export default function Steps() {
           <Reveal>
             <Eyebrow dark>Simple Enquiry Process</Eyebrow>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-ink md:text-4xl">
-              How <span className="text-gold-dark">SecureNest works</span>
+              How <span className="text-brand-yellow">SecureNest works</span>
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
@@ -35,7 +35,7 @@ export default function Steps() {
               <span className="absolute right-5 top-4 font-display text-sm font-extrabold text-line">
                 0{i + 1}
               </span>
-              <div className="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-[#fbf8f1] text-gold-dark">
+              <div className="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-[#fbf8f1] text-brand-yellow">
                 <s.icon className="h-6 w-6" />
               </div>
               <h3 className="font-display text-base font-extrabold text-ink">{s.title}</h3>

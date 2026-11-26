@@ -35,7 +35,7 @@ export default function FourWheelerPage() {
             <Reveal>
               <Eyebrow dark>Understand Your Options</Eyebrow>
               <h2 className="mt-4 font-display text-3xl font-extrabold text-ink">
-                Explore <span className="text-gold-dark">four wheeler insurance</span>
+                Explore <span className="text-brand-yellow">four wheeler insurance</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1} className="max-w-md">
@@ -48,7 +48,7 @@ export default function FourWheelerPage() {
           <RevealStagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {cards.map((c) => (
               <RevealItem key={c.title} className="rounded-card border border-line bg-white p-6">
-                <div className="mb-4 grid h-10 w-10 place-items-center rounded-lg bg-cream text-gold-dark">
+                <div className="mb-4 grid h-10 w-10 place-items-center rounded-lg bg-cream text-brand-yellow">
                   <c.icon className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-sm font-extrabold text-ink">{c.title}</h3>

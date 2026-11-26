@@ -16,7 +16,7 @@ export default function WhySection() {
         <Reveal>
           <Eyebrow dark>About SecureNest</Eyebrow>
           <h2 className="mt-4 font-display text-3xl font-extrabold text-ink md:text-4xl">
-            A clearer way to explore <span className="text-gold-dark">vehicle insurance.</span>
+            A clearer way to explore <span className="text-brand-yellow">vehicle insurance.</span>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-muted">
             SecureNest is a vehicle insurance assistance brand designed to help customers make informed enquiries about private and commercial vehicle insurance options.
@@ -26,7 +26,7 @@ export default function WhySection() {
         <div className="grid gap-4">
           {points.map((p, i) => (
             <Reveal key={p.title} delay={0.1 * i} className="flex items-center gap-4 rounded-card bg-white p-5 shadow-sm">
-              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#f8f0df] text-gold-dark">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#f8f0df] text-brand-yellow">
                 <p.icon className="h-6 w-6" />
               </div>
               <div>

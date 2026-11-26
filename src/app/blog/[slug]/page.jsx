@@ -53,12 +53,12 @@ export default async function BlogPostPage({ params }) {
         <Reveal>
           <Link
             href="/blog"
-            className="mb-8 inline-flex items-center gap-2 text-sm font-bold text-muted hover:text-gold-dark"
+            className="mb-8 inline-flex items-center gap-2 text-sm font-bold text-muted hover:text-brand-yellow"
           >
             <ArrowLeft className="h-4 w-4" /> Back to guides
           </Link>
 
-          <div className="mb-3 text-xs font-extrabold tracking-wider text-gold-dark">
+          <div className="mb-3 text-xs font-extrabold tracking-wider text-brand-yellow">
             {post.category}
           </div>
           <h1 className="font-display text-3xl font-extrabold text-ink md:text-5xl md:leading-tight">
@@ -82,7 +82,7 @@ export default async function BlogPostPage({ params }) {
 
       <Reveal delay={0.2} className="mt-10">
   <div 
-    className="prose prose-sm md:prose-base prose-slate max-w-none prose-headings:font-display prose-headings:font-extrabold prose-headings:text-ink prose-a:text-gold-dark hover:prose-a:text-gold prose-li:marker:text-gold"
+    className="prose prose-sm md:prose-base prose-slate max-w-none prose-headings:font-display prose-headings:font-extrabold prose-headings:text-ink prose-a:text-brand-yellow hover:prose-a:text-gold prose-li:marker:text-gold"
     dangerouslySetInnerHTML={{ __html: post.content }} 
   />
 </Reveal>
