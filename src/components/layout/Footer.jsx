@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-4 border-t border-border-soft pt-8 text-sm text-text-muted md:flex-row md:items-center md:justify-between">
-          <span>© {new Date().getFullYear()} SecureNest. All rights reserved.</span>
+          <span>©2026 SecureNest. All rights reserved.</span>
           <span className="flex gap-4">
             <Link href="/privacy-policy" className="transition-colors hover:text-primary">Privacy</Link>
             <span>·</span>
