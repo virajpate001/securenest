@@ -14,7 +14,7 @@ export default function SplitFeature() {
         <div className="relative h-[350px] md:h-[450px]">
           <ImageReveal className="h-full w-full overflow-hidden rounded-[2rem] shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800"
+              src="https://res.cloudinary.com/gwy8xgtr/image/upload/v1795763143/img_1_t4sff3.webp"
               alt="New vehicle purchase"
               fill
               className="object-cover"
