@@ -7,7 +7,7 @@ import { RevealStagger, RevealItem } from "@/components/ui/RevealStagger";
 import { ArrowRight } from "lucide-react";
 
 const vehicles = [
-  { slug: "two-wheeler-insurance", title: "Two Wheeler", kicker: "PRIVATE VEHICLE", desc: "Motorcycles, scooters and eligible electric two-wheelers.", img: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=600" },
+  { slug: "two-wheeler-insurance", title: "Two Wheeler", kicker: "PRIVATE VEHICLE", desc: "Motorcycles, scooters and eligible electric two-wheelers.", img: "https://res.cloudinary.com/gwy8xgtr/image/upload/v1795761442/card1_eitz9x.webp" },
   { slug: "three-wheeler-insurance", title: "Three Wheeler", kicker: "THREE WHEELER", desc: "Explore insurance options for eligible three-wheelers.", img: "https://images.unsplash.com/photo-1566008885242-492c4d1c727c?auto=format&fit=crop&q=80&w=600" },
   { slug: "four-wheeler-insurance", title: "Four Wheeler", kicker: "PRIVATE VEHICLE", desc: "Private cars, SUVs and eligible electric cars.", img: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=600" },
   { slug: "commercial-vehicle-insurance", title: "Commercial", kicker: "COMMERCIAL VEHICLE", desc: "Passenger vehicles, goods carriers and transport vehicles.", img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=600" },
