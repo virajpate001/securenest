@@ -11,10 +11,13 @@ const nextConfig = {
       },
     },
   },
-   images: {
-    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
+  images: {
+    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" },{
+        protocol: "https",
+        hostname: "res.cloudinary.com", // <--- ADD THIS
+      },],
     // Cache images for 60 days (in seconds)
-    minimumCacheTTL: 60 * 60 * 24 * 60, 
+    minimumCacheTTL: 60 * 60 * 24 * 60,
   },
   async headers() {
     return [
