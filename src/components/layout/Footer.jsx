@@ -18,7 +18,7 @@ export default function Footer() {
 
             <Reveal className="rounded-card bg-white p-4 mt-4" >
                       
-                       <div className="mt-6 space-y-4 text-sm">
+                       <div className="space-y-4 text-sm">
                          <p><strong>WhatsApp:</strong> +91 98765 43210</p>
                          <p><strong>Email:</strong> support@securenest.in</p>
                          <p><strong>Service area:</strong> All India</p>

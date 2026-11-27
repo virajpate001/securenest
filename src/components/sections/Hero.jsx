@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="relative h-[350px] w-full md:h-[480px]">
           <ImageReveal className="h-full w-full rounded-[2rem] overflow-hidden shadow-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=1000"
+              src="https://res.cloudinary.com/gwy8xgtr/image/upload/v1795760238/home1_jg4glj.webp"
               alt="Luxury car driving on road"
               fill
               className="object-cover"
